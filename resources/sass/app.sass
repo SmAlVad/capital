@@ -1,0 +1,399 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito')
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap')
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap-grid'
+
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome'
+
+// Slick Carousel
+@import "~slick-carousel/slick/slick"
+@import "~slick-carousel/slick/slick-theme"
+
+// Reset
+@import "reset"
+
+// Helper classes
+@import "helper-classes"
+
+// Auth
+@import "auth"
+
+// Colors
+$black: #161616
+$red: #C82E29
+
+html, body
+    margin: 0
+    padding: 0
+    font-family: 'Helvetica', serif
+    font-size: 16px
+
+#app
+    width: 100vw
+    height: 100vh
+    position: relative
+    background-image: url("../images/bg.jpg")
+    overflow: hidden
+
+.site-container
+    height: 100%
+    overflow-y: auto
+    overflow-x: hidden
+
+
+.site-navigation
+    position: fixed
+    top: 0
+    left: 20%
+    z-index: 9
+
+    ul
+        margin: 0
+        padding: 0
+        list-style-type: none
+        display: flex
+
+        .logo
+            padding: 0
+            img
+                width: 297px
+
+        li
+            a
+                display: block
+                padding: 25px 20px
+                background-color: $black
+                color: white
+                font-size: .8rem
+                text-decoration: none
+                text-transform: uppercase
+
+            .active
+                background-color: $red
+
+            .log-in
+                background-color: white
+                color: $black
+                &:hover
+                    color: $red
+
+
+.social-link
+    position: fixed
+    top: 5%
+    left: 2%
+
+    ul
+        list-style-type: none
+        padding: 0
+        margin: 0
+
+        li
+            margin-bottom: 10px
+
+            a
+                color: white
+                background-color: $black
+                border-radius: 50%
+                width: 30px
+                height: 30px
+                display: flex
+                align-items: center
+                justify-content: center
+
+
+// Top Carousel
+.top-carousel
+    padding-top: 300px
+    text-align: center
+    font-family: 'Playfair Display', serif
+    margin-bottom: 100px
+
+.top-carousel__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.top-carousel__item-text
+    display: inline-block
+    padding: 0 10px
+    font-size: 2.7rem
+    margin-bottom: 5px
+
+.top-carousel-text-black
+    background-color: white
+    color: $black
+
+.top-carousel-text-white
+    background-color: $black
+    color: white
+
+.top-carousel-text-red
+    background-color: $red
+    color: white
+    font-size: 1.1rem
+    text-align: right
+    margin-left: 29%
+
+// ИНВЕСТИЦИИ - ЭТО ПРОСТО
+.investments
+    color: white
+    text-align: center
+    background-color: rgba(0, 0, 0, .9)
+
+.investor-scheme
+    display: flex
+    justify-content: space-between
+
+.investor-scheme__el
+    img
+        width: 100px
+        height: 100px
+
+.investor-scheme_arrow
+    position: relative
+    width: 166px
+
+    svg
+        position: absolute
+        top: 20%
+        left: 0
+
+// Партнер
+.partner
+    background-color: $red
+    color: white
+    display: flex
+    justify-content: center
+
+.partner__swissquote
+    display: flex
+    align-items: center
+
+    img
+        width: 238px
+        height: 31px
+
+.partner_more
+    margin-left: 5%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgba(255, 0, 0, 1)
+    padding: 2% 3%
+    color: white
+    text-decoration: none
+
+// Стратегии
+.strategies
+    background-color: rgba(0, 0, 0, .9)
+    color: white
+
+    h2
+        text-align: center
+
+.strategies__more
+    display: flex
+    justify-content: center
+
+    a
+        color: white
+        text-decoration: none
+        padding: 5px 5%
+        border: 2px solid $red
+        border-radius: 5px
+        &:hover
+            border: 2px solid rgba(255, 0, 0, 1)
+            background-color: rgba(255, 0, 0, 1)
+
+.strategies_list
+    display: flex
+    justify-content: space-between
+
+    ul
+        margin: 0
+        padding: 20px 10px
+        list-style-type: none
+        text-align: center
+        background-color: black
+        border-radius: 5px
+        flex-basis: 19.5%
+
+        li
+            margin-bottom: 10%
+
+    .strategies_list-hot
+        background-color: $red
+
+// Гарантии и страховка
+.guarantee
+    background-color: $red
+    h2
+        text-align: center
+        span
+            background-color: white
+            color: $red
+
+.guarantee__list
+    padding: 3% 0
+    text-align: center
+    display: flex
+    justify-content: center
+
+.guarantee__list-item
+    padding: 0 5%
+    img
+        width: 160px
+        height: 160px
+    h4
+        color: white
+
+.guarantee__more
+    display: flex
+    justify-content: center
+
+    a
+        color: $black
+        background-color: white
+        text-decoration: none
+        padding: 5px 5%
+        border-radius: 5px
+        &:hover
+            color: white
+            background-color: rgba(255, 0, 0, 1)
+
+// Отзывы
+.testimonials-container
+    background-color: rgba(0, 0, 0, .9)
+
+    h2
+        text-align: center
+        color: white
+        padding-top: 0
+
+        span
+            background-color: $red
+
+.testimonials
+    color: white
+    font-style: italic
+    font-size: 1.5rem
+    font-weight: 100
+
+.testimonials__item
+
+.testimonials__item-text
+    width: 70%
+    margin: auto
+    line-height: 40px
+    padding: 40px
+    position: relative
+
+.testimonials__item-text::before
+    content: "\201C"
+    font-size: 3rem
+    font-weight: bold
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 1
+
+
+.testimonials__item-text::after
+    content: "\201D"
+    font-size: 3rem
+    font-weight: bold
+    position: absolute
+    right: 0
+    bottom: 0
+    z-index: 1
+
+.testimonials__item-author
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 370px
+    height: 50px
+    margin: auto
+
+    svg
+        position: absolute
+        top: 0
+        left: 0
+
+.testimonials__item-author-name
+    z-index: 1
+
+
+// Footer
+.footer-container
+    display: flex
+
+// Контакты
+.about
+    padding: 7% 0
+    flex-basis: 50%
+    background-color: $black
+    color: white
+    h2
+        font-weight: 100
+
+.contact-info
+    line-height: 25px
+
+.contact-info-separator
+    width: 50%
+    height: 2px
+    margin: auto
+    background-color: white
+
+// Напишите нам
+.feedback
+    padding: 7% 0
+    flex-basis: 50%
+    background-color: $red
+    color: white
+    h2
+        font-weight: 100
+
+.feedback-form
+    width: 70%
+    margin: auto
+
+.feedback-form-row
+    display: flex
+    justify-content: space-between
+
+.feedback-form-col-6
+    flex-basis: 49%
+
+.form-control-input, textarea
+    display: block
+    width: 100%
+    border: 0
+    padding: 6px 3px
+    color: black
+    font-size: 1rem
+    margin-bottom: 20px
+
+.feedback-form-submit
+    display: block
+    width: 100%
+    border: 0
+    font-size: 1rem
+    padding: 10px
+    text-align: center
+    background-color: $black
+    color: white
+    cursor: pointer
+
+
+
+
+
+
