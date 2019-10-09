@@ -15,28 +15,24 @@
             <li>
                 <a class="log-in" href="{{ route('login') }}">Войти</a>
             </li>
-{{--            @if (Route::has('register'))--}}
-{{--                <li class="">--}}
-{{--                    <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
-{{--                </li>--}}
-{{--            @endif--}}
         @else
-            <li class="">
-                <a class="" href="#">
+            <li>
+                <a class="log-in" href="{{ route('home') }}">
+                    <i class="far fa-user mr-2"></i>
                     {{ Auth::user()->name }}
                 </a>
+            </li>
 
-                <div class="">
-                    <a class="" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
+            <li>
+                <a class="log-out" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                </div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </li>
         @endguest
     </ul>

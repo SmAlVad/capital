@@ -12,18 +12,18 @@
 @import "~slick-carousel/slick/slick"
 @import "~slick-carousel/slick/slick-theme"
 
-// Reset
-@import "reset"
-
-// Helper classes
-@import "helper-classes"
-
-// Auth
-@import "auth"
-
 // Colors
 $black: #161616
 $red: #C82E29
+
+// Reset
+@import "reset"
+// Helper classes
+@import "helper-classes"
+// Auth
+@import "auth"
+// User home
+@import "home"
 
 html, body
     margin: 0
@@ -47,7 +47,10 @@ html, body
 .site-navigation
     position: fixed
     top: 0
-    left: 20%
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: center
     z-index: 9
 
     ul
@@ -74,7 +77,7 @@ html, body
             .active
                 background-color: $red
 
-            .log-in
+            .log-in, .log-out
                 background-color: white
                 color: $black
                 &:hover

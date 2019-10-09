@@ -12,14 +12,13 @@
                 <label for="name">Имя</label>
                 <input id="name"
                        type="text"
-                       class="form-control @error('name') is-invalid @enderror"
-                       name="email" value="{{ old('name') }}"
+                       class="form-control  @error('name') is-invalid @enderror"
+                       name="name" value="{{ old('name') }}"
                        required
-                       autocomplete="name"
                        autofocus>
 
                 @error('name')
-                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
                 @enderror
             </div>
 
@@ -30,11 +29,10 @@
                        class="form-control @error('email') is-invalid @enderror"
                        name="email" value="{{ old('email') }}"
                        required
-                       autocomplete="email"
                        autofocus>
 
                 @error('email')
-                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
                 @enderror
             </div>
 
@@ -44,11 +42,10 @@
                        type="password"
                        class="form-control @error('password') is-invalid @enderror"
                        name="password"
-                       required
-                       autocomplete="current-password">
+                       required>
 
                 @error('password')
-                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
                 @enderror
             </div>
 
@@ -56,13 +53,12 @@
                 <label for="referal">Реферал</label>
                 <input id="referal"
                        type="text"
-                       class="form-control @error('password') is-invalid @enderror"
-                       name="referal"
-                       required
-                       autocomplete="current-referal">
+                       class="form-control @error('referal') is-invalid @enderror"
+                       name="referal" value="{{ old('referal') }}"
+                       required>
 
-                @error('password')
-                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                @error('referal')
+                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
                 @enderror
             </div>
 
