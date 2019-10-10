@@ -12,7 +12,7 @@ class GoodController extends Controller
         $goods = [];
         $price = [300, 400, 500, 600, 1000, 1200, 1500, 1800, 2000, 2100, 2500];
 
-        for ($i = 1; $i <= 30; $i++) {
+        for ($i = 1; $i <= 3000; $i++) {
             $goods += [
                 $i => [
                     "id" => $i,
