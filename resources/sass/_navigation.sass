@@ -1,0 +1,75 @@
+.site-navigation
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    z-index: 9
+
+    ul
+        margin: 0
+        padding: 0
+        list-style-type: none
+        display: flex
+
+        .logo
+            padding: 0
+            img
+                width: 297px
+
+        li
+            a
+                display: block
+                padding: 25px 20px
+                background-color: $black
+                color: white
+                font-size: .8rem
+                text-decoration: none
+                text-transform: uppercase
+                &:hover
+                    background-color: #262626
+
+            .active
+                background-color: $red
+
+            .log-in, .log-out
+                background-color: white
+                color: $black
+                &:hover
+                    color: $red
+
+
+.mobile-logo
+    display: none
+
+.mobile-navigation
+    display: none
+
+@media screen and (max-width: 768px)
+    .site-navigation
+        display: none
+
+
+    .mobile-navigation-container
+        display: block
+        color: white
+        padding: 5px
+
+        .mobile-navigation
+            display: flex
+
+            img
+                width: 80%
+
+            #dropdown-navigation
+                width: 20%
+                background-color: $black
+                color: white
+                font-size: 3rem
+                display: flex
+                justify-content: center
+                align-items: center
+                cursor: pointer
+
+
