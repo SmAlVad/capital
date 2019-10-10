@@ -16,5 +16,3 @@ Route::get('/', 'IndexController@index')->name('index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/goods', 'GoodController@index');
