@@ -38,3 +38,11 @@
     </ul>
 
 </nav>
+
+
+<div class="mobile-navigation-container">
+    <div class="mobile-navigation">
+        <img src="images/logo.jpg" alt="Капитал центр Благовещенск">
+        <div id="dropdown-navigation"><i class="fas fa-bars"></i></div>
+    </div>
+</div>

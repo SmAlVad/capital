@@ -1,21 +1,17 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito')
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap')
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap-grid'
-
-// Fontawesome
-@import '~@fortawesome/fontawesome-free/scss/fontawesome'
-
-// Slick Carousel
-@import "~slick-carousel/slick/slick"
-@import "~slick-carousel/slick/slick-theme"
-
 // Colors
 $black: #161616
 $red: #C82E29
 
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito')
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap')
+// Bootstrap
+@import '~bootstrap/scss/bootstrap-grid'
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome'
+// Slick Carousel
+@import "~slick-carousel/slick/slick"
+@import "~slick-carousel/slick/slick-theme"
 // Reset
 @import "reset"
 // Helper classes
@@ -24,6 +20,10 @@ $red: #C82E29
 @import "auth"
 // User home
 @import "home"
+// Navigation
+@import "navigation"
+// Social links
+@import "social"
 
 html, body
     margin: 0
@@ -42,74 +42,6 @@ html, body
     height: 100%
     overflow-y: auto
     overflow-x: hidden
-
-
-.site-navigation
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    display: flex
-    justify-content: center
-    z-index: 9
-
-    ul
-        margin: 0
-        padding: 0
-        list-style-type: none
-        display: flex
-
-        .logo
-            padding: 0
-            img
-                width: 297px
-
-        li
-            a
-                display: block
-                padding: 25px 20px
-                background-color: $black
-                color: white
-                font-size: .8rem
-                text-decoration: none
-                text-transform: uppercase
-                &:hover
-                    background-color: #262626
-
-            .active
-                background-color: $red
-
-            .log-in, .log-out
-                background-color: white
-                color: $black
-                &:hover
-                    color: $red
-
-
-.social-link
-    position: fixed
-    top: 5%
-    left: 2%
-    z-index: 9
-
-    ul
-        list-style-type: none
-        padding: 0
-        margin: 0
-
-        li
-            margin-bottom: 10px
-
-            a
-                color: white
-                background-color: $black
-                border-radius: 50%
-                width: 30px
-                height: 30px
-                display: flex
-                align-items: center
-                justify-content: center
-
 
 // Top Carousel
 .top-carousel
@@ -308,7 +240,6 @@ html, body
     top: 0
     z-index: 1
 
-
 .testimonials__item-text::after
     content: "\201D"
     font-size: 3rem
@@ -335,10 +266,10 @@ html, body
 .testimonials__item-author-name
     z-index: 1
 
-
 // Footer
 .footer
     display: flex
+    flex-wrap: wrap
 
 // Контакты
 .about
@@ -398,8 +329,70 @@ html, body
     color: white
     cursor: pointer
 
+@media screen and (max-width: 768px)
+    html, body
+        font-size: 12px
 
+    #app
+        background-size: cover
 
+    .top-carousel
+        padding: 80px 15px 0 15px
+        margin-bottom: 50px
+    .investor-scheme__el
+        img
+            width: 60px
+            height: 60px
 
+    .investor-scheme_arrow
+        svg
+            width: 70px
+            position: absolute
+            top: 10%
+            left: 5%
 
+    .partner__swissquote
+        img
+            width: 130px
+            height: auto
+
+    .strategies_list
+        flex-wrap: wrap
+
+        ul
+            flex-basis: 49.5%
+            margin-bottom: 1%
+
+            li
+                margin-bottom: 10%
+
+    .guarantee__list-item
+        img
+            width: 80px
+            height: auto
+
+    .testimonials__item-text
+        width: 80%
+        line-height: 20px
+        padding: 10px
+
+    .slick-prev
+        left: 0
+        top: 15%
+
+    .slick-next
+        right: 10px
+        top: 15%
+
+    .footer
+        padding-bottom: 30%
+
+    .about
+        flex-basis: 100%
+
+    .feedback
+        flex-basis: 100%
+
+    .feedback-form
+        width: 90%
 
