@@ -185,12 +185,12 @@
     {{-- /ГАРАНТИИ И СТРАХОВКА--}}
 
     {{-- ОТЗЫВЫ--}}
-    <section class="py-4 testimonials-container">
+    <section class="py-4 testimonials">
         <h2 class="fs-2-5rem ls-3"><span>ОТЗЫВЫ</span></h2>
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="mt-5 testimonials">
+                    <div class="mt-5 testimonials-box">
 
                         <div class="testimonials__item">
                             <blockquote class="mb-4 testimonials__item-text">
@@ -272,7 +272,7 @@
     </section>
     {{-- /ОТЗЫВЫ--}}
 
-    <div class="footer-container">
+    <div class="footer">
         {{-- КОНТАКТЫ--}}
         <section class="text-center about">
             <h2 class="fs-2-5rem ls-3 mt-0"><span>КОНТАКТЫ</span></h2>

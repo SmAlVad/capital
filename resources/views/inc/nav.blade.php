@@ -4,12 +4,12 @@
         <li class="logo">
             <img src="images/logo.jpg" alt="Капитал центр Благовещенск">
         </li>
-        <li><a href="#" class="active">Главная</a></li>
-        <li><a href="#">О проекте</a></li>
-        <li><a href="#">Стратегии</a></li>
-        <li><a href="#">Гарантии</a></li>
-        <li><a href="#">Отзывы</a></li>
-        <li><a href="#">О нас</a></li>
+        <li><a href="{{ route('index') }}" class="nav-link active" data-section="index">Главная</a></li>
+        <li><a href="#" class="nav-link" data-section="investments">О проекте</a></li>
+        <li><a href="#" class="nav-link" data-section="strategies">Стратегии</a></li>
+        <li><a href="#" class="nav-link" data-section="guarantee">Гарантии</a></li>
+        <li><a href="#" class="nav-link" data-section="testimonials">Отзывы</a></li>
+        <li><a href="#" class="nav-link" data-section="footer">О нас</a></li>
 
         @guest
             <li>
