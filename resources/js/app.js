@@ -1,23 +1,16 @@
 require('./bootstrap');
-
 require('jquery/dist/jquery.min');
-
 require('@fortawesome/fontawesome-free/js/all.min');
 
-require('slick-carousel/slick/slick');
+window.Vue = require('vue');
+Vue.component('top-carousel', require('./components/TopCarousel.vue').default);
+Vue.component('testimonials-carousel', require('./components/TestimonialsCarousel').default);
+
+const app = new Vue({
+    el: '#app',
+});
 
 $(document).ready(function(){
-
-    // top carousel
-    $('.top-carousel').slick({
-        //autoplay: true
-    });
-
-    // testimonials carousel
-    $('.testimonials-box').slick({
-        //autoplay: true
-        dots: true
-    });
 
     let navLinks = $('.nav-link'),
         investments = $('.investments')[0].offsetTop,
